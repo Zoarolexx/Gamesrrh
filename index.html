@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>LOST ISLAND — Survival</title>
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="loading"><div class="load-title">LOST ISLAND</div><div>Menyiapkan pulau...</div></div>
+<div id="intro" class="panel"><div class="eyebrow">A SURVIVAL ADVENTURE</div><h1>LOST ISLAND</h1><p>Kapalmu hancur diterjang badai. Kamu terdampar di pulau misterius. Kumpulkan bahan, bertahan hidup, dan bangun kapal untuk pulang.</p><button id="startBtn">MULAI PETUALANGAN</button><small>WASD untuk bergerak · E untuk mengambil · Klik untuk menyerang</small></div>
+<div id="hud" class="hidden">
+ <div class="brand">LOST <b>ISLAND</b><small>DAY <span id="day">1</span></small></div>
+ <div class="stats"><div>❤ <span id="hp">100</span><div class="bar"><i id="hpbar"></i></div></div><div>🍗 <span id="food">100</span><div class="bar"><i id="foodbar"></i></div></div><div>💧 <span id="water">100</span><div class="bar"><i id="waterbar"></i></div></div></div>
+ <div class="objective"><small>OBJECTIVE</small><b id="objective">Cari kayu dan batu untuk bertahan hidup.</b></div>
+ <div class="inventory" id="inventory"></div>
+ <div id="prompt"></div>
+ <div class="controls-help">WASD Gerak · SHIFT Lari · E Interaksi · Klik Serang · C Crafting</div>
+ <button id="craftBtn" class="craft-button">⚒ CRAFTING</button>
+</div>
+<div id="craftPanel" class="panel hidden"><button class="close" id="closeCraft">✕</button><div class="eyebrow">SURVIVAL WORKBENCH</div><h2>CRAFTING</h2><div id="recipes"></div></div>
+<div id="toast"></div>
+<div id="touchControls" class="hidden"><div class="pad"><button data-key="KeyW">▲</button><div><button data-key="KeyA">◀</button><button data-key="KeyS">▼</button><button data-key="KeyD">▶</button></div></div><div class="touch-actions"><button id="touchInteract">E</button><button id="touchAttack">⚔</button></div></div>
+<script type="module" src="./src/main.js"></script>
+</body></html>
